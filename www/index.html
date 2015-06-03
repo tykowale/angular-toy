@@ -1,1 +1,28 @@
-Hello World!
+<html ng-app="flashcardApps">
+<head>
+    <title> Angular Demo App</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div ng-controller="flashcardController">
+        <input ng-model="sortCriteria.name">
+        <p>{{ sortCriteria.name }}</p>
+        <div ng-repeat="deck in decks">
+            <span> {{deck.name}}</span>
+            <span> {{deck.description}}</span>
+        </div>
+
+        <div ng-controller="formController">
+            <input ng-model="sortCriteria.name">
+            <p>{{ sortCriteria.name }}</p>
+            <div ng-repeat="deck in decks">
+                <span> {{deck.name}}</span>
+                <span> {{deck.description}}</span>
+            </div>
+        </div>
+    </div>
+    <script src="lib/angular/angular.js"></script>
+    <script src="app/flashcards.js"></script>
+</body>
+</html>
