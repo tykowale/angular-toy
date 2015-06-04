@@ -1,6 +1,8 @@
 angular.module('flashcardApps', [])
-.controller('flashcardController', function($scope) {
-       $scope.decks = [
+.controller('flashcardController', function() {
+        fc = this;
+        fc.sortCriteria = {};
+        fc.decks = [
            {
                "name": "English Words",
                "description": "Learn some english with these cards!"
